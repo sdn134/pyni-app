@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Menu</title>
+  <style>
+    body {
+      background: #000;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+    }
+    h1 {
+      margin-top: 80px;
+      font-size: 28px;
+      color: #ff0044;
+      text-shadow: 0 0 15px #ff0044;
+    }
+    .menu {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .btn {
+      width: 200px;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(45deg, #ff0033, #ff0055);
+      color: white;
+      box-shadow: 0 0 15px #ff0044;
+    }
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    /* Popup Profile */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: #111;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 15px #ff0044;
+      width: 250px;
+    }
+    .popup-content p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .close-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #ff0033;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Main Menu</h1>
+  <div class="menu">
+    <button class="btn" onclick="attackMenu()">⚡ Attack Menu</button>
+    <button class="btn" onclick="openProfile()">👤 Profile</button>
+    <button class="btn">⚙ Settings</button>
+    <button class="btn" onclick="aboutMenu()">ℹ About</button>
+  </div>
+
+  <!-- Popup Profile -->
+  <div id="profilePopup" class="popup">
+    <div class="popup-content">
+      <p>nama : nama lu bokep kali 🤣</p>
+      <button class="close-btn" onclick="closeProfile()">Tutup</button>
+    </div>
+  </div>
+
+  <script>
+    function attackMenu(){
+      alert("UDAH TAU PYNI MASIH PEMULA MALAH NGAREP DAPAT APK RDVSP DARI DIA LAWAK 🤡");
+    }
+
+    function openProfile(){
+      document.getElementById("profilePopup").style.display = "flex";
+    }
+
+    function closeProfile(){
+      document.getElementById("profilePopup").style.display = "none";
+    }
+
+    function aboutMenu(){
+      alert("⚡ Woi bang, jangan nyerang mulu wkwk 🤣");
+    }
+  </script>
+</body>
+</html>
